@@ -1,12 +1,13 @@
+
 import PocketBase from 'pocketbase';
-import { error } from '@sveltejs/kit';
+import { error, json } from '@sveltejs/kit';
 
-const pb = new PocketBase('http://127.0.0.1:8090/_'); // Replace with your PocketBase URL
+const pb = new PocketBase('http://127.0.0.1:8090'); // remove the trailing slash/underscore!
 
-export async function GET({ params }) {
+export const GET = async ({ params }) => {
   const { trackingCode } = params;
 
-  if (!trackingCode) {          
+  if (!trackingCode) {
     throw error(400, 'Tracking code is required');
   }
 
@@ -20,18 +21,15 @@ export async function GET({ params }) {
       throw error(404, 'Tracking code not found');
     }
 
-    return {
-      status: 200,
-      body: {
-        tracking_number: shipment.tracking_number,
-        status: shipment.status,
-        current_location: shipment.current_location,
-        estimated_delivery: shipment.estimated_delivery,
-        history: shipment.history || []
-      }
-    };
+    return json({
+      tracking_number: shipment.tracking_number,
+      status: shipment.status,
+      current_location: shipment.current_location,
+      estimated_delivery: shipment.estimated_delivery,
+      history: shipment.history || []
+    });
   } catch (err) {
     console.error(err);
     throw error(500, 'Failed to fetch tracking data');
   }
-}
+};
