@@ -6,9 +6,7 @@
 	}
 </script>
 
-<header
-	class="fixed top-0 z-800 w-full items-center rounded-b-3xl bg-black/90 bg-blue-700 p-2 px-4"
->
+<header class="fixed top-0 z-800 w-full items-center rounded-b-3xl bg-blue-700 p-2 px-4">
 	<nav class="z-200 flex items-center justify-between">
 		<div class="flex items-center gap-2 text-white">
 			<img

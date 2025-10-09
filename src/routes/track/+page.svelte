@@ -1,90 +1,101 @@
 <script lang="ts">
-	import { fly } from 'svelte/transition';
-	import Accordion from '$lib/Accordion.svelte';
-	import { track } from '$lib/variable.svelte';
 	import { onMount } from 'svelte';
+	let trackCode: string = ''; // The tracking code input by the user
+	let trackingInfo: any = null; // Stores the tracking information once fetched
+	let errorMsg: string | boolean = false; // Shows error message when tracking code is invalid
 
-	let trackCode: any = $state('');
-	let errorMsg = $state(false);
+	// Function to fetch tracking data from the backend
+	async function handleTrack(event: Event) {
+		event.preventDefault(); // Prevents page refresh on form submission
 
-	onMount(() => {
-		// Check if trackCode is already in localStorage
-		const stored = localStorage.getItem('trackCode');
+		errorMsg = false; // Reset error message
+		trackingInfo = null; // Reset tracking information
 
-		if (stored) {
-			trackCode = stored;
-		} else {
-			trackCode = track.trackCode;
-			localStorage.setItem('trackCode', trackCode);
+		// Check if the tracking code is empty
+		if (!trackCode) {
+			errorMsg = 'Tracking code is required'; // Show error if no code is entered
+			return;
 		}
 
-		setTimeout(() => {
-			if (trackCode == 2000) {
-				errorMsg = true;
+		try {
+			console.log('Sending request to API with tracking code:', trackCode);
+
+			// Call the API endpoint to fetch tracking info
+			const response = await fetch(`/api/track/${trackCode}`);
+
+			if (response.ok) {
+				// If the request was successful, parse and set the tracking data
+				const data = await response.json();
+				trackingInfo = data;
+				console.log('Tracking data received:', data);
+			} else {
+				// Handle any errors from the API
+				const errorData = await response.json();
+				console.error('API Error:', errorData);
+				errorMsg = errorData.error || 'Tracking code not found';
 			}
-		}, 1000);
-
-		setTimeout(() => {
-			errorMsg = false;
-		}, 4000);
-	});
-
-	function handleTrack() {
-		if (trackCode == 2000) {
-			errorMsg = true;
+		} catch (err) {
+			console.error('Error fetching tracking data:', err);
+			errorMsg = 'Failed to fetch tracking data'; // Show error if the fetch request fails
 		}
-
-		setTimeout(() => {
-			errorMsg = false;
-		}, 4000);
 	}
 </script>
 
+<!-- UI for Tracking Input and Display -->
 <div class="mt-25 flex flex-col justify-center p-4 md:items-center">
 	<h3 class="text-center text-4xl font-bold text-blue-500">Track & Trace</h3>
 
-	<form action="" class="mt-2 items-center px-4 md:flex md:space-x-3">
+	<!-- Form for entering tracking number -->
+	<form onsubmit={handleTrack} class="mt-2 items-center px-4 md:flex md:space-x-3">
 		<fieldset class="fieldset">
 			<legend class="fieldset-legend">Enter your Tracking number</legend>
 			<input
 				type="text"
-				value={trackCode}
+				bind:value={trackCode}
 				class="input focus h-12 w-full p-3 focus:ring-2 focus:ring-blue-500 focus:outline-none md:w-[400px]"
 				placeholder="Type here"
 				required
 			/>
-			<!-- <p class="label">Optional</p> -->
 		</fieldset>
 
 		<button
 			type="submit"
-			onclick={handleTrack}
 			class="btn mt-2 bg-blue-500 p-6 text-white transition-transform duration-300 hover:scale-105 md:mt-7"
 		>
 			Track
 		</button>
 	</form>
 
-	{#if errorMsg == true}
-		<div role="alert" class="alert alert-error mt-6" transition:fly={{ x: -200, duration: 500 }}>
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				class="h-6 w-6 shrink-0 stroke-current"
-				fill="none"
-				viewBox="0 0 24 24"
-			>
-				<path
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-width="2"
-					d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
-				/>
-			</svg>
-			<span>Error! Tracking code not found.</span>
+	<!-- Error message when tracking code is invalid -->
+	{#if errorMsg}
+		<div role="alert" class="alert alert-error mt-6">
+			<span>{errorMsg}</span>
 		</div>
 	{/if}
 
-	<div class="mt-18">
-		<Accordion />
-	</div>
+	<!-- Display tracking information once fetched -->
+	{#if trackingInfo}
+		<div class="mt-18">
+			<div class="mt-4 rounded bg-white p-4 shadow">
+				<h2 class="mb-2 text-xl font-bold text-blue-600">Shipment Details</h2>
+				<p><strong>Status:</strong> {trackingInfo.status}</p>
+				<p><strong>Current Location:</strong> {trackingInfo.current_location}</p>
+				<p>
+					<strong>Estimated Delivery:</strong>
+					{new Date(trackingInfo.estimated_delivery).toLocaleDateString()}
+				</p>
+
+				<div class="mt-4">
+					<h3 class="text-lg font-semibold">Tracking History</h3>
+					<ul class="mt-2 space-y-2">
+						{#each trackingInfo.history as item (item.timestamp)}
+							<li class="border-l-4 border-blue-500 pl-3">
+								<span class="text-gray-600">{new Date(item.timestamp).toLocaleString()}</span> — {item.event}
+							</li>
+						{/each}
+					</ul>
+				</div>
+			</div>
+		</div>
+	{/if}
 </div>
