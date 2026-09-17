@@ -1,31 +1,29 @@
-// src/hooks.server.js
 import PocketBase from 'pocketbase';
 
 /** @type {import('@sveltejs/kit').Handle} */
 export async function handle({ event, resolve }) {
-	event.locals.pb = new PocketBase('http://127.0.0.1:8090/_');
+	event.locals.pb = new PocketBase('https://playgzero.pb.itcass.net');
+	event.locals.user = null;
 
-	// load the store data from the request cookie string
-	event.locals.pb.authStore.loadFromCookie(event.request.headers.get('cookie') || '');
+	const cookie = event.request.headers.get('cookie') || '';
+	event.locals.pb.authStore.loadFromCookie(cookie);
 
-	try {
-		// verify and refresh the user
-		if (event.locals.pb.authStore.isValid) {
-			const authData = await event.locals.pb.collection('users').authRefresh();
-			event.locals.user = authData.record; // ✅ assign the user to locals
-		} else {
-			event.locals.user = null;
+	if (event.locals.pb.authStore.isValid) {
+		try {
+			const authData = await event.locals.pb.collection('admin_users').authRefresh();
+			event.locals.user = authData.record;
+		} catch {
+			event.locals.pb.authStore.clear();
 		}
-	} catch (_) {
-		// clear the auth store on failed refresh
-		event.locals.pb.authStore.clear();
-		event.locals.user = null; // ❗ set user to null on error
 	}
 
 	const response = await resolve(event);
 
-	// send updated cookie back
-	response.headers.append('set-cookie', event.locals.pb.authStore.exportToCookie());
+	if (event.url.pathname === '/api/auth/logout') {
+		event.locals.pb.authStore.clear();
+	}
+
+	response.headers.append('set-cookie', event.locals.pb.authStore.exportToCookie({ path: '/' }));
 
 	return response;
 }
