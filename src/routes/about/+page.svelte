@@ -1,6 +1,38 @@
 <svelte:head>
-	<title>About Us | SwiftPort Logistics</title>
-	<meta name="description" content="Learn about SwiftPort Logistics — fast, secure, and reliable global logistics for individuals and businesses worldwide." />
+	<title>About SwiftPort Logistics | Global Shipping Company</title>
+	<meta name="description" content="Learn about SwiftPort Logistics — a global shipping company providing fast, secure, and reliable logistics solutions for individuals and businesses worldwide." />
+	<meta name="keywords" content="SwiftPort Logistics, about SwiftPort, global shipping company, logistics company, freight forwarding company, international shipping, supply chain" />
+	<link rel="canonical" href="https://www.swiftportlogistics.online/about" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="About SwiftPort Logistics | Global Shipping Company" />
+	<meta property="og:description" content="Learn about SwiftPort Logistics — a global shipping company providing fast, secure, and reliable logistics solutions for individuals and businesses worldwide." />
+	<meta property="og:url" content="https://www.swiftportlogistics.online/about" />
+	<meta property="og:image" content="https://www.swiftportlogistics.online/Gemini_Generated_Image_l3496wl3496wl349.png" />
+	<meta property="og:site_name" content="SwiftPort Logistics" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="About SwiftPort Logistics | Global Shipping Company" />
+	<meta name="twitter:description" content="Learn about SwiftPort Logistics — a global shipping company providing fast, secure, and reliable logistics solutions for individuals and businesses worldwide." />
+	<meta name="twitter:image" content="https://www.swiftportlogistics.online/Gemini_Generated_Image_l3496wl3496wl349.png" />
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement": [
+				{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.swiftportlogistics.online/" },
+				{ "@type": "ListItem", "position": 2, "name": "About", "item": "https://www.swiftportlogistics.online/about" }
+			]
+		}
+	</script>
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"name": "SwiftPort Logistics",
+			"url": "https://www.swiftportlogistics.online",
+			"logo": "https://www.swiftportlogistics.online/Gemini_Generated_Image_l3496wl3496wl349.png",
+			"description": "Fast, secure, and reliable global logistics for individuals and businesses worldwide."
+		}
+	</script>
 </svelte:head>
 
 <section class="bg-navy">

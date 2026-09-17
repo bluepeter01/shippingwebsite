@@ -6,14 +6,8 @@
 	<div class="container-wide py-16 lg:py-20">
 		<div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
 			<div class="lg:col-span-2">
-				<a href="/" class="flex items-center gap-3">
-					<div class="flex h-9 w-9 items-center justify-center rounded-lg bg-amber">
-						<svg class="h-5 w-5 text-navy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-							<path d="M12 2L2 7l10 5 10-5-10-5z"/>
-							<path d="M2 17l10 5 10-5"/>
-							<path d="M2 12l10 5 10-5"/>
-						</svg>
-					</div>
+			<a href="/" class="flex items-center gap-3">
+				<img src="/Gemini_Generated_Image_l3496wl3496wl349.png" alt="SwiftPort Logistics" class="h-10 w-10 rounded-lg object-cover" />
 					<div>
 						<span class="text-lg font-bold text-white">SwiftPort</span>
 						<span class="text-lg font-light text-white/60"> Logistics</span>

@@ -28,8 +28,40 @@
 </script>
 
 <svelte:head>
-	<title>Careers | SwiftPort Logistics</title>
-	<meta name="description" content="Join SwiftPort Logistics. Explore career opportunities in global shipping, logistics, and supply chain management." />
+	<title>Careers at SwiftPort Logistics | Join Our Team</title>
+	<meta name="description" content="Join SwiftPort Logistics and build the future of global shipping. Explore career opportunities in logistics, customs compliance, customer support, and operations." />
+	<meta name="keywords" content="SwiftPort careers, logistics jobs, shipping jobs, customs compliance careers, customer support jobs, operations analyst, logistics coordinator, global shipping jobs" />
+	<link rel="canonical" href="https://www.swiftportlogistics.online/careers" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Careers at SwiftPort Logistics | Join Our Team" />
+	<meta property="og:description" content="Join SwiftPort Logistics and build the future of global shipping. Explore career opportunities in logistics, customs compliance, customer support, and operations." />
+	<meta property="og:url" content="https://www.swiftportlogistics.online/careers" />
+	<meta property="og:image" content="https://www.swiftportlogistics.online/Gemini_Generated_Image_l3496wl3496wl349.png" />
+	<meta property="og:site_name" content="SwiftPort Logistics" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Careers at SwiftPort Logistics | Join Our Team" />
+	<meta name="twitter:description" content="Join SwiftPort Logistics and build the future of global shipping. Explore career opportunities in logistics, customs compliance, customer support, and operations." />
+	<meta name="twitter:image" content="https://www.swiftportlogistics.online/Gemini_Generated_Image_l3496wl3496wl349.png" />
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement": [
+				{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.swiftportlogistics.online/" },
+				{ "@type": "ListItem", "position": 2, "name": "Careers", "item": "https://www.swiftportlogistics.online/careers" }
+			]
+		}
+	</script>
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"name": "SwiftPort Logistics",
+			"url": "https://www.swiftportlogistics.online",
+			"logo": "https://www.swiftportlogistics.online/Gemini_Generated_Image_l3496wl3496wl349.png",
+			"description": "Fast, secure, and reliable global logistics for individuals and businesses worldwide."
+		}
+	</script>
 </svelte:head>
 
 <section class="bg-navy">

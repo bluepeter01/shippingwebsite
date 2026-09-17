@@ -39,13 +39,7 @@
 	>
 
 		<div class="flex h-[68px] shrink-0 items-center gap-3 border-b border-slate-200/80 px-5">
-			<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-navy">
-				<svg class="h-5 w-5 text-amber" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-					<path d="M12 2L2 7l10 5 10-5-10-5z"/>
-					<path d="M2 17l10 5 10-5"/>
-					<path d="M2 12l10 5 10-5"/>
-				</svg>
-			</div>
+			<img src="/Gemini_Generated_Image_l3496wl3496wl349.png" alt="SwiftPort" class="h-10 w-10 shrink-0 rounded-xl object-cover" />
 			<div class="min-w-0">
 				<p class="truncate text-[15px] font-bold text-navy leading-tight">SwiftPort</p>
 				<p class="truncate text-[11px] font-semibold uppercase tracking-widest text-muted/50">Admin Panel</p>

@@ -28,8 +28,40 @@
 </script>
 
 <svelte:head>
-	<title>Press & Media | SwiftPort Logistics</title>
-	<meta name="description" content="Latest news, press releases, and media coverage from SwiftPort Logistics." />
+	<title>Press & Media | SwiftPort Logistics News</title>
+	<meta name="description" content="Latest news, press releases, and media coverage from SwiftPort Logistics. Stay updated on company milestones, technology upgrades, and industry insights." />
+	<meta name="keywords" content="SwiftPort news, logistics news, shipping news, press releases, media coverage, freight industry, logistics company news, supply chain updates" />
+	<link rel="canonical" href="https://www.swiftportlogistics.online/press" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Press & Media | SwiftPort Logistics News" />
+	<meta property="og:description" content="Latest news, press releases, and media coverage from SwiftPort Logistics. Stay updated on company milestones, technology upgrades, and industry insights." />
+	<meta property="og:url" content="https://www.swiftportlogistics.online/press" />
+	<meta property="og:image" content="https://www.swiftportlogistics.online/Gemini_Generated_Image_l3496wl3496wl349.png" />
+	<meta property="og:site_name" content="SwiftPort Logistics" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Press & Media | SwiftPort Logistics News" />
+	<meta name="twitter:description" content="Latest news, press releases, and media coverage from SwiftPort Logistics. Stay updated on company milestones, technology upgrades, and industry insights." />
+	<meta name="twitter:image" content="https://www.swiftportlogistics.online/Gemini_Generated_Image_l3496wl3496wl349.png" />
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement": [
+				{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.swiftportlogistics.online/" },
+				{ "@type": "ListItem", "position": 2, "name": "Press", "item": "https://www.swiftportlogistics.online/press" }
+			]
+		}
+	</script>
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"name": "SwiftPort Logistics",
+			"url": "https://www.swiftportlogistics.online",
+			"logo": "https://www.swiftportlogistics.online/Gemini_Generated_Image_l3496wl3496wl349.png",
+			"description": "Fast, secure, and reliable global logistics for individuals and businesses worldwide."
+		}
+	</script>
 </svelte:head>
 
 <section class="bg-navy">

@@ -40,8 +40,40 @@
 </script>
 
 <svelte:head>
-	<title>Services | SwiftPort Logistics</title>
-	<meta name="description" content="SwiftPort Logistics offers air freight, sea freight, road freight, warehousing, customs clearance, and customer support for global shipping needs." />
+	<title>Our Logistics Services | Air Freight, Sea Freight, Customs Clearance | SwiftPort</title>
+	<meta name="description" content="Comprehensive logistics services from SwiftPort: air freight, sea freight, road freight, warehousing, customs clearance, and customer support for global shipping needs." />
+	<meta name="keywords" content="logistics services, air freight, sea freight, road freight, warehousing, customs clearance, global shipping, freight forwarding, supply chain management, SwiftPort Logistics" />
+	<link rel="canonical" href="https://www.swiftportlogistics.online/services" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Our Logistics Services | Air Freight, Sea Freight, Customs Clearance | SwiftPort" />
+	<meta property="og:description" content="Comprehensive logistics services from SwiftPort: air freight, sea freight, road freight, warehousing, customs clearance, and customer support for global shipping needs." />
+	<meta property="og:url" content="https://www.swiftportlogistics.online/services" />
+	<meta property="og:image" content="https://www.swiftportlogistics.online/Gemini_Generated_Image_l3496wl3496wl349.png" />
+	<meta property="og:site_name" content="SwiftPort Logistics" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Our Logistics Services | Air Freight, Sea Freight, Customs Clearance | SwiftPort" />
+	<meta name="twitter:description" content="Comprehensive logistics services from SwiftPort: air freight, sea freight, road freight, warehousing, customs clearance, and customer support for global shipping needs." />
+	<meta name="twitter:image" content="https://www.swiftportlogistics.online/Gemini_Generated_Image_l3496wl3496wl349.png" />
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement": [
+				{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.swiftportlogistics.online/" },
+				{ "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.swiftportlogistics.online/services" }
+			]
+		}
+	</script>
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"name": "SwiftPort Logistics",
+			"url": "https://www.swiftportlogistics.online",
+			"logo": "https://www.swiftportlogistics.online/Gemini_Generated_Image_l3496wl3496wl349.png",
+			"description": "Fast, secure, and reliable global logistics for individuals and businesses worldwide."
+		}
+	</script>
 </svelte:head>
 
 <section class="bg-navy">

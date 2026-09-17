@@ -53,8 +53,40 @@
 </script>
 
 <svelte:head>
-	<title>Track Shipment | SwiftPort Logistics</title>
-	<meta name="description" content="Track your SwiftPort Logistics shipment in real time." />
+	<title>Track Your Shipment | SwiftPort Logistics</title>
+	<meta name="description" content="Track your SwiftPort Logistics shipment in real time. Enter your tracking number for instant updates on package status, location, and delivery progress." />
+	<meta name="keywords" content="track shipment, package tracking, shipment tracking, tracking number, delivery status, real-time tracking, SwiftPort tracking, logistics tracking" />
+	<link rel="canonical" href="https://www.swiftportlogistics.online/track" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Track Your Shipment | SwiftPort Logistics" />
+	<meta property="og:description" content="Track your SwiftPort Logistics shipment in real time. Enter your tracking number for instant updates on package status, location, and delivery progress." />
+	<meta property="og:url" content="https://www.swiftportlogistics.online/track" />
+	<meta property="og:image" content="https://www.swiftportlogistics.online/Gemini_Generated_Image_l3496wl3496wl349.png" />
+	<meta property="og:site_name" content="SwiftPort Logistics" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Track Your Shipment | SwiftPort Logistics" />
+	<meta name="twitter:description" content="Track your SwiftPort Logistics shipment in real time. Enter your tracking number for instant updates on package status, location, and delivery progress." />
+	<meta name="twitter:image" content="https://www.swiftportlogistics.online/Gemini_Generated_Image_l3496wl3496wl349.png" />
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement": [
+				{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.swiftportlogistics.online/" },
+				{ "@type": "ListItem", "position": 2, "name": "Track", "item": "https://www.swiftportlogistics.online/track" }
+			]
+		}
+	</script>
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"name": "SwiftPort Logistics",
+			"url": "https://www.swiftportlogistics.online",
+			"logo": "https://www.swiftportlogistics.online/Gemini_Generated_Image_l3496wl3496wl349.png",
+			"description": "Fast, secure, and reliable global logistics for individuals and businesses worldwide."
+		}
+	</script>
 </svelte:head>
 
 <section class="bg-navy">

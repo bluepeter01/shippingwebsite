@@ -9,13 +9,7 @@
 <div class="flex min-h-screen items-center justify-center bg-[#F8FAFC] px-4">
 	<div class="w-full max-w-sm">
 		<div class="text-center mb-8">
-			<div class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-navy">
-				<svg class="h-7 w-7 text-amber" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-					<path d="M12 2L2 7l10 5 10-5-10-5z"/>
-					<path d="M2 17l10 5 10-5"/>
-					<path d="M2 12l10 5 10-5"/>
-				</svg>
-			</div>
+			<img src="/Gemini_Generated_Image_l3496wl3496wl349.png" alt="SwiftPort" class="mx-auto h-16 w-16 rounded-2xl object-cover" />
 			<h1 class="mt-5 text-2xl font-bold text-navy" style="font-family: var(--font-display);">SwiftPort Admin</h1>
 			<p class="mt-2 text-sm text-muted">Sign in to access the admin panel</p>
 		</div>

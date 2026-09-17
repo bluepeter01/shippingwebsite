@@ -16,8 +16,40 @@
 </script>
 
 <svelte:head>
-	<title>Contact Us | SwiftPort Logistics</title>
-	<meta name="description" content="Get in touch with SwiftPort Logistics. Contact us for shipping inquiries, quotes, and customer support." />
+	<title>Contact SwiftPort Logistics | Get in Touch</title>
+	<meta name="description" content="Get in touch with SwiftPort Logistics. Contact us for shipping inquiries, quotes, customer support, and partnership opportunities." />
+	<meta name="keywords" content="contact SwiftPort, contact logistics company, shipping inquiry, shipping quote, customer support, logistics contact, SwiftPort phone, SwiftPort email" />
+	<link rel="canonical" href="https://www.swiftportlogistics.online/contact" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Contact SwiftPort Logistics | Get in Touch" />
+	<meta property="og:description" content="Get in touch with SwiftPort Logistics. Contact us for shipping inquiries, quotes, customer support, and partnership opportunities." />
+	<meta property="og:url" content="https://www.swiftportlogistics.online/contact" />
+	<meta property="og:image" content="https://www.swiftportlogistics.online/Gemini_Generated_Image_l3496wl3496wl349.png" />
+	<meta property="og:site_name" content="SwiftPort Logistics" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Contact SwiftPort Logistics | Get in Touch" />
+	<meta name="twitter:description" content="Get in touch with SwiftPort Logistics. Contact us for shipping inquiries, quotes, customer support, and partnership opportunities." />
+	<meta name="twitter:image" content="https://www.swiftportlogistics.online/Gemini_Generated_Image_l3496wl3496wl349.png" />
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement": [
+				{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.swiftportlogistics.online/" },
+				{ "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.swiftportlogistics.online/contact" }
+			]
+		}
+	</script>
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"name": "SwiftPort Logistics",
+			"url": "https://www.swiftportlogistics.online",
+			"logo": "https://www.swiftportlogistics.online/Gemini_Generated_Image_l3496wl3496wl349.png",
+			"description": "Fast, secure, and reliable global logistics for individuals and businesses worldwide."
+		}
+	</script>
 </svelte:head>
 
 <section class="bg-navy">

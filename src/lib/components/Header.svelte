@@ -28,13 +28,7 @@
 	<div class="container-wide">
 		<nav class="flex h-16 items-center justify-between lg:h-20">
 			<a href="/" class="flex items-center gap-3" onclick={closeMobile}>
-				<div class="flex h-9 w-9 items-center justify-center rounded-lg bg-amber lg:h-10 lg:w-10">
-					<svg class="h-5 w-5 text-navy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-						<path d="M12 2L2 7l10 5 10-5-10-5z"/>
-						<path d="M2 17l10 5 10-5"/>
-						<path d="M2 12l10 5 10-5"/>
-					</svg>
-				</div>
+				<img src="/Gemini_Generated_Image_l3496wl3496wl349.png" alt="SwiftPort Logistics" class="h-10 w-10 rounded-lg object-cover lg:h-11 lg:w-11" />
 				<div class="hidden sm:block">
 					<span class="text-lg font-bold text-white">SwiftPort</span>
 					<span class="text-lg font-light text-white/70"> Logistics</span>
